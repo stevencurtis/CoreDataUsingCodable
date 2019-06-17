@@ -15,12 +15,14 @@
 		CA6207BD22B5D02A005FBD0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6207BB22B5D02A005FBD0A /* LaunchScreen.storyboard */; };
 		CA6207C822B5D02B005FBD0A /* CoreDataUsingCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6207C722B5D02B005FBD0A /* CoreDataUsingCodableTests.swift */; };
 		CA6207D322B5D02B005FBD0A /* CoreDataUsingCodableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6207D222B5D02B005FBD0A /* CoreDataUsingCodableUITests.swift */; };
-		CA6207E122B5DB50005FBD0A /* GitCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6207E022B5DB50005FBD0A /* GitCommit.swift */; };
-		CA6207E322B5DBDE005FBD0A /* CommitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6207E222B5DBDE005FBD0A /* CommitNode.swift */; };
 		CA76E27A22B758A5006FCBC7 /* Commit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E27822B758A5006FCBC7 /* Commit+CoreDataClass.swift */; };
 		CA76E27B22B758A5006FCBC7 /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E27922B758A5006FCBC7 /* Commit+CoreDataProperties.swift */; };
-		CA76E27D22B76263006FCBC7 /* Committer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E27C22B76263006FCBC7 /* Committer.swift */; };
 		CA76E27F22B76EA3006FCBC7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E27E22B76EA3006FCBC7 /* SwiftyJSON.swift */; };
+		CA76E28222B78FBD006FCBC7 /* GitCommit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E28022B78FBD006FCBC7 /* GitCommit+CoreDataClass.swift */; };
+		CA76E28322B78FBD006FCBC7 /* GitCommit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E28122B78FBD006FCBC7 /* GitCommit+CoreDataProperties.swift */; };
+		CA76E28622B798EB006FCBC7 /* Committer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E28422B798EB006FCBC7 /* Committer+CoreDataClass.swift */; };
+		CA76E28722B798EB006FCBC7 /* Committer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E28522B798EB006FCBC7 /* Committer+CoreDataProperties.swift */; };
+		CA76E28922B79A0E006FCBC7 /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76E28822B79A0E006FCBC7 /* CodingUserInfoKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +57,14 @@
 		CA6207CE22B5D02B005FBD0A /* CoreDataUsingCodableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataUsingCodableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6207D222B5D02B005FBD0A /* CoreDataUsingCodableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUsingCodableUITests.swift; sourceTree = "<group>"; };
 		CA6207D422B5D02B005FBD0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA6207E022B5DB50005FBD0A /* GitCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommit.swift; sourceTree = "<group>"; };
-		CA6207E222B5DBDE005FBD0A /* CommitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitNode.swift; sourceTree = "<group>"; };
 		CA76E27822B758A5006FCBC7 /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CA76E27922B758A5006FCBC7 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CA76E27C22B76263006FCBC7 /* Committer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Committer.swift; sourceTree = "<group>"; };
 		CA76E27E22B76EA3006FCBC7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		CA76E28022B78FBD006FCBC7 /* GitCommit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitCommit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA76E28122B78FBD006FCBC7 /* GitCommit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitCommit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA76E28422B798EB006FCBC7 /* Committer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Committer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA76E28522B798EB006FCBC7 /* Committer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Committer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA76E28822B79A0E006FCBC7 /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,10 @@
 		CA6207A322B5D028005FBD0A = {
 			isa = PBXGroup;
 			children = (
+				CA76E28422B798EB006FCBC7 /* Committer+CoreDataClass.swift */,
+				CA76E28522B798EB006FCBC7 /* Committer+CoreDataProperties.swift */,
+				CA76E28022B78FBD006FCBC7 /* GitCommit+CoreDataClass.swift */,
+				CA76E28122B78FBD006FCBC7 /* GitCommit+CoreDataProperties.swift */,
 				CA76E27822B758A5006FCBC7 /* Commit+CoreDataClass.swift */,
 				CA76E27922B758A5006FCBC7 /* Commit+CoreDataProperties.swift */,
 				CA6207AE22B5D028005FBD0A /* CoreDataUsingCodable */,
@@ -116,8 +124,8 @@
 				CA6207AF22B5D028005FBD0A /* AppDelegate.swift */,
 				CA6207B122B5D028005FBD0A /* ViewController.swift */,
 				CA76E27E22B76EA3006FCBC7 /* SwiftyJSON.swift */,
-				CA6207E422B5E07E005FBD0A /* Models */,
 				CA6207B322B5D028005FBD0A /* Main.storyboard */,
+				CA76E28A22B79A14006FCBC7 /* Extensions */,
 				CA6207B922B5D02A005FBD0A /* Assets.xcassets */,
 				CA6207BB22B5D02A005FBD0A /* LaunchScreen.storyboard */,
 				CA6207BE22B5D02A005FBD0A /* Info.plist */,
@@ -144,14 +152,12 @@
 			path = CoreDataUsingCodableUITests;
 			sourceTree = "<group>";
 		};
-		CA6207E422B5E07E005FBD0A /* Models */ = {
+		CA76E28A22B79A14006FCBC7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CA6207E222B5DBDE005FBD0A /* CommitNode.swift */,
-				CA6207E022B5DB50005FBD0A /* GitCommit.swift */,
-				CA76E27C22B76263006FCBC7 /* Committer.swift */,
+				CA76E28822B79A0E006FCBC7 /* CodingUserInfoKey.swift */,
 			);
-			path = Models;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,14 +292,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA76E27A22B758A5006FCBC7 /* Commit+CoreDataClass.swift in Sources */,
-				CA6207E122B5DB50005FBD0A /* GitCommit.swift in Sources */,
+				CA76E28622B798EB006FCBC7 /* Committer+CoreDataClass.swift in Sources */,
+				CA76E28222B78FBD006FCBC7 /* GitCommit+CoreDataClass.swift in Sources */,
 				CA76E27B22B758A5006FCBC7 /* Commit+CoreDataProperties.swift in Sources */,
+				CA76E28722B798EB006FCBC7 /* Committer+CoreDataProperties.swift in Sources */,
 				CA6207B222B5D028005FBD0A /* ViewController.swift in Sources */,
+				CA76E28322B78FBD006FCBC7 /* GitCommit+CoreDataProperties.swift in Sources */,
 				CA6207B822B5D028005FBD0A /* CoreDataUsingCodable.xcdatamodeld in Sources */,
+				CA76E28922B79A0E006FCBC7 /* CodingUserInfoKey.swift in Sources */,
 				CA6207B022B5D028005FBD0A /* AppDelegate.swift in Sources */,
 				CA76E27F22B76EA3006FCBC7 /* SwiftyJSON.swift in Sources */,
-				CA76E27D22B76263006FCBC7 /* Committer.swift in Sources */,
-				CA6207E322B5DBDE005FBD0A /* CommitNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

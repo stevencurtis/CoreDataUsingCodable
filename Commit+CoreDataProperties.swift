@@ -17,9 +17,9 @@ extension Commit {
         return NSFetchRequest<Commit>(entityName: "Commit")
     }
 
-    @NSManaged public var date: NSDate?
-    @NSManaged public var message: String?
     @NSManaged public var sha: String?
     @NSManaged public var url: String?
-
+    @NSManaged public var html_url: String?
+    @NSManaged public var gitcommit: GitCommit?
 }
+

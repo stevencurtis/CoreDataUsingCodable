@@ -1,5 +1,5 @@
 //
-//  Committer.swift
+//  CodingUserInfoKey.swift
 //  CoreDataUsingCodable
 //
 //  Created by Steven Curtis on 17/06/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Committer: Codable {
-    var date: String
+extension CodingUserInfoKey {
+    static let context = CodingUserInfoKey(rawValue: "context")
 }

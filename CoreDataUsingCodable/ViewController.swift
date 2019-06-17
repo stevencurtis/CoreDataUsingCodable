@@ -38,8 +38,10 @@ class ViewController: UIViewController {
     
     func loadSavedData() {
         let request: NSFetchRequest<Commit> = Commit.fetchRequest()
-        let sort = NSSortDescriptor(key: "date", ascending: false)
+        let sort = NSSortDescriptor(key: "gitcommit.committer.date", ascending: false)
         request.sortDescriptors = [sort]
+        
+        
         
         do {
             // fetch is performed on the NSManagedObjectContext
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
     func saveContext() {
         if container.viewContext.hasChanges {
             do {
+                print ("Saved")
                 try container.viewContext.save()
             } catch {
                 print("An error occurred while saving: \(error)")
@@ -71,17 +74,17 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             do {
                 let decoder = JSONDecoder()
-                let commitData = try decoder.decode([CommitNode].self, from: data)
+                
+                // Assign the NSManagedIbject Context to the decoder
+                decoder.userInfo[CodingUserInfoKey.context!] = self.container.viewContext
+                
+                let commitData = try decoder.decode([Commit].self, from: data) // Commit rather than CommmitData
 
                 print("Received \(commitData.count) new commits.")
 
                 // Move back on the main thread, as we call tableview.reload
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else {return}
-                    for commitNode in commitData {
-                        let commit = Commit(context: self.container.viewContext)
-                        self.configure(commit: commit, usingNode: commitNode)
-                    }
                     self.saveContext()
                     self.loadSavedData()
                 }
@@ -90,16 +93,7 @@ class ViewController: UIViewController {
             }
             }.resume()
     }
-    
-    func configure(commit: Commit, usingNode: CommitNode){
-        // requires NSManagedObject subclass
-        commit.sha = usingNode.sha
-        commit.message = usingNode.commit.message
-        commit.url = usingNode.html_url
 
-        let formatter = ISO8601DateFormatter()
-        commit.date = (formatter.date(from: usingNode.commit.committer.date )! as NSDate)
-    }
 }
 
 extension ViewController : UITableViewDataSource {
@@ -109,8 +103,8 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = (data[indexPath.row] as! Commit).message
-        cell.detailTextLabel?.text = (data[indexPath.row] as! Commit).date?.description
+        cell.textLabel?.text = (data[indexPath.row] as! Commit).sha
+        cell.detailTextLabel?.text = (data[indexPath.row] as! Commit).gitcommit?.committer!.date?.description
         return cell
     }
 }
